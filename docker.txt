@@ -1,0 +1,33 @@
+docker pull busybox          //to pull image
+docker images                // list all images
+docker run busybox           // create continer by this image
+docker ps                    // all docker continer works
+docker ps -a                 //  all continers
+docker run --detach busybox sleep infinty         // --detach run command in background
+docker exec c38a3e9d1280 nc -zv google.com 808   //  docker exec [container id ] [another command]  ->
+docker stop [container ID]              // stop continer but still excist
+docker start [container ID]
+
+----------------
+docker stop [docker ID ]
+docker rm [docker ID ] to remove continer
+docker rmi [image ID ] // for remove image
+-----------------------------------
+docker rm -f [Continer ID ] remove force
+--------------------------------------
+
+
+
+docker run -d -P nginx   // -p to make rundom port  P capital
+docker run -d -p nginx 8080:80 //to make a port p small
+docker run -d -p  8080:80 --name myWebServer nginx //to make a port p small
+
+----------------------------------------------------
+docker volume create myData  // to create new voulume
+
+ docker run -it -v myData:/opt busybox sh
+
+
+
+
+docker run busybox 5              // make continer sleep 5 min
